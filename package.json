@@ -13,7 +13,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "node test.js"
+    "test": "ava"
   },
   "files": [
     "index.js"
@@ -26,6 +26,6 @@
     "reserved"
   ],
   "devDependencies": {
-    "ava": "0.0.4"
+    "ava": "*"
   }
 }

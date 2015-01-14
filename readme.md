@@ -15,16 +15,16 @@ $ npm install --save filename-reserved-regex
 ## Usage
 
 ```js
-var filenameReservedRegex = require('filename-reserved-regex');
+const filenameReservedRegex = require('filename-reserved-regex');
 
 filenameReservedRegex().test('foo/bar');
-//=> false
-
-filenameReservedRegex().test('foo-bar');
 //=> true
 
+filenameReservedRegex().test('foo-bar');
+//=> false
+
 'foo/bar'.replace(filenameReservedRegex(), '!');
-//=> foo!bar
+//=> 'foo!bar'
 ```
 
 

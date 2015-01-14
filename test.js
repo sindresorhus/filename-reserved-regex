@@ -1,9 +1,7 @@
-'use strict';
-var test = require('ava');
-var filenameReservedRegex = require('./');
+import test from 'ava';
+import m from './';
 
-test(function (t) {
-	t.assert(filenameReservedRegex().test('foo/bar'));
-	t.assert(!filenameReservedRegex().test('foo-bar'));
-	t.end();
+test(t => {
+	t.true(m().test('foo/bar'));
+	t.false(m().test('foo-bar'));
 });
