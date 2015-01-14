@@ -1,6 +1,6 @@
 {
   "name": "filename-reserved-regex",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Regular expression for matching reserved filename characters",
   "license": "MIT",
   "repository": "sindresorhus/filename-reserved-regex",
