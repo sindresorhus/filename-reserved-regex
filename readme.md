@@ -2,7 +2,7 @@
 
 > Regular expression for matching reserved filename characters
 
-On Unix-like systems `/` is reserved and [`<>:"/\|?*`](http://msdn.microsoft.com/en-us/library/aa365247%28VS.85%29#naming_conventions) on Windows.
+On Unix-like systems `/` is reserved and [`<>:"/\|?*`](http://msdn.microsoft.com/en-us/library/aa365247%28VS.85%29#naming_conventions) as well as non-printable characters `\x00-\x1F` on Windows.
 
 
 ## Install

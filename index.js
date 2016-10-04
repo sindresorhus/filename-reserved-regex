@@ -1,4 +1,4 @@
 'use strict';
 module.exports = function () {
-	return /[<>:"\/\\|?*]/g;
+	return /[<>:"\/\\|?*\x00-\x1F]/g;
 };
