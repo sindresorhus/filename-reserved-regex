@@ -2,11 +2,19 @@ import test from 'ava';
 import m from './';
 
 test(t => {
-	t.true(m().test('foo/bar'));
-	t.true(m().test('foo\x00bar'));
-	t.true(m().test('foo\x1Fbar'));
-	t.true(m().test('foo*bar'));
-	t.true(m().test('foo\\bar'));
-	t.true(m().test('foo:bar'));
-	t.false(m().test('foo-bar'));
+	t.regex('foo/bar', m());
+	t.regex('foo\x00bar', m());
+	t.regex('foo\x1Fbar', m());
+	t.regex('foo*bar', m());
+	t.regex('foo\\bar', m());
+	t.regex('foo:bar', m());
+	t.notRegex('foo-bar', m());
+
+	t.notRegex('foo-bar', m());
+
+	t.notRegex('AUX', m());
+	t.regex('AUX', m.windowsNames());
+
+	t.notRegex('com1', m());
+	t.regex('com1', m.windowsNames());
 });

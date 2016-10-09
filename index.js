@@ -1,4 +1,3 @@
 'use strict';
-module.exports = function () {
-	return /[<>:"\/\\|?*\x00-\x1F]/g;
-};
+module.exports = () => /[<>:"\/\\|?*\x00-\x1F]/g;
+module.exports.windowsNames = () => /^(con|prn|aux|nul|com[0-9]|lpt[0-9])$/i;
