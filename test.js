@@ -1,20 +1,20 @@
-import test from 'ava';
-import m from './';
+const test = require('ava');
+const filenameReservedRegex = require('.');
 
-test(t => {
-	t.regex('foo/bar', m());
-	t.regex('foo\x00bar', m());
-	t.regex('foo\x1Fbar', m());
-	t.regex('foo*bar', m());
-	t.regex('foo\\bar', m());
-	t.regex('foo:bar', m());
-	t.notRegex('foo-bar', m());
+test('main', t => {
+	t.regex('foo/bar', filenameReservedRegex());
+	t.regex('foo\u0000bar', filenameReservedRegex());
+	t.regex('foo\u001Fbar', filenameReservedRegex());
+	t.regex('foo*bar', filenameReservedRegex());
+	t.regex('foo\\bar', filenameReservedRegex());
+	t.regex('foo:bar', filenameReservedRegex());
+	t.notRegex('foo-bar', filenameReservedRegex());
 
-	t.notRegex('foo-bar', m());
+	t.notRegex('foo-bar', filenameReservedRegex());
 
-	t.notRegex('AUX', m());
-	t.regex('AUX', m.windowsNames());
+	t.notRegex('AUX', filenameReservedRegex());
+	t.regex('AUX', filenameReservedRegex.windowsNames());
 
-	t.notRegex('com1', m());
-	t.regex('com1', m.windowsNames());
+	t.notRegex('com1', filenameReservedRegex());
+	t.regex('com1', filenameReservedRegex.windowsNames());
 });
