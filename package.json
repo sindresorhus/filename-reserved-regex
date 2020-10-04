@@ -4,6 +4,7 @@
 	"description": "Regular expression for matching reserved filename characters",
 	"license": "MIT",
 	"repository": "sindresorhus/filename-reserved-regex",
+	"funding": "https://github.com/sponsors/sindresorhus",
 	"author": {
 		"name": "Sindre Sorhus",
 		"email": "sindresorhus@gmail.com",
@@ -19,7 +20,6 @@
 		"index.js"
 	],
 	"keywords": [
-		"re",
 		"regex",
 		"regexp",
 		"filename",

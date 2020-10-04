@@ -1,16 +1,14 @@
-# filename-reserved-regex [![Build Status](https://travis-ci.com/sindresorhus/filename-reserved-regex.svg?branch=master)](https://travis-ci.com/sindresorhus/filename-reserved-regex)
+# filename-reserved-regex [![Build Status](https://travis-ci.com/sindresorhus/filename-reserved-regex.svg?branch=master)](https://travis-ci.com/github/sindresorhus/filename-reserved-regex)
 
 > Regular expression for matching reserved filename characters
 
 On Unix-like systems `/` is reserved and [`<>:"/\|?*`](https://docs.microsoft.com/en-us/windows/win32/fileio/naming-a-file#naming-conventions) as well as non-printable characters `\u0000-\u001F` on Windows.
-
 
 ## Install
 
 ```
 $ npm install filename-reserved-regex
 ```
-
 
 ## Usage
 
