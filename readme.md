@@ -1,4 +1,4 @@
-# filename-reserved-regex [![Build Status](https://travis-ci.com/sindresorhus/filename-reserved-regex.svg?branch=master)](https://travis-ci.com/github/sindresorhus/filename-reserved-regex)
+# filename-reserved-regex
 
 > Regular expression for matching reserved filename characters
 
