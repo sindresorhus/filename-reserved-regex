@@ -1,5 +1,5 @@
-const test = require('ava');
-const filenameReservedRegex = require('.');
+import test from 'ava';
+import filenameReservedRegex, {windowsReservedNameRegex} from './index.js';
 
 test('main', t => {
 	t.regex('foo/bar', filenameReservedRegex());
@@ -13,8 +13,8 @@ test('main', t => {
 	t.notRegex('foo-bar', filenameReservedRegex());
 
 	t.notRegex('AUX', filenameReservedRegex());
-	t.regex('AUX', filenameReservedRegex.windowsNames());
+	t.regex('AUX', windowsReservedNameRegex());
 
 	t.notRegex('com1', filenameReservedRegex());
-	t.regex('com1', filenameReservedRegex.windowsNames());
+	t.regex('com1', windowsReservedNameRegex());
 });

@@ -13,7 +13,7 @@ $ npm install filename-reserved-regex
 ## Usage
 
 ```js
-const filenameReservedRegex = require('filename-reserved-regex');
+import filenameReservedRegex, {windowsReservedNameRegex} from 'filename-reserved-regex';
 
 filenameReservedRegex().test('foo/bar');
 //=> true
@@ -24,7 +24,7 @@ filenameReservedRegex().test('foo-bar');
 'foo/bar'.replace(filenameReservedRegex(), '!');
 //=> 'foo!bar'
 
-filenameReservedRegex.windowsNames().test('aux');
+windowsReservedNameRegex().test('aux');
 //=> true
 ```
 
@@ -34,7 +34,7 @@ filenameReservedRegex.windowsNames().test('aux');
 
 Returns a regex that matches all invalid characters.
 
-### filenameReservedRegex.windowsNames()
+### windowsReservedNameRegex()
 
 Returns an exact-match case-insensitive regex that matches invalid Windows
 filenames. These include `CON`, `PRN`, `AUX`, `NUL`, `COM1`, `COM2`, `COM3`, `COM4`, `COM5`,
