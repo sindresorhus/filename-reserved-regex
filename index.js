@@ -1,7 +1,7 @@
 /* eslint-disable no-control-regex */
 
 export default function filenameReservedRegex() {
-	return /[<>:"/\\|?*\u0000-\u001F]/g;
+	return /[<>:"/\\|?*\u0000-\u001F]|[. ]$/g;
 }
 
 export function windowsReservedNameRegex() {

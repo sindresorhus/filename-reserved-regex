@@ -2,12 +2,12 @@
 
 > Regular expression for matching reserved filename characters
 
-On Unix-like systems `/` is reserved and [`<>:"/\|?*`](https://docs.microsoft.com/en-us/windows/win32/fileio/naming-a-file#naming-conventions) as well as non-printable characters `\u0000-\u001F` on Windows.
+On Unix-like systems `/` is reserved and [`<>:"/\|?*`](https://docs.microsoft.com/en-us/windows/win32/fileio/naming-a-file#naming-conventions) as well as non-printable characters `\u0000-\u001F` on Windows. Windows also doesn't allow names ending in space or period.
 
 ## Install
 
-```
-$ npm install filename-reserved-regex
+```sh
+npm install filename-reserved-regex
 ```
 
 ## Usage
