@@ -5,5 +5,5 @@ export default function filenameReservedRegex() {
 }
 
 export function windowsReservedNameRegex() {
-	return /^(?:con|prn|aux|nul|com[1-9¹²³]|lpt[1-9¹²³])(?:\..*)?$/i;
+	return /^(?:con|prn|aux|nul|conin\$|conout\$|com[\d¹²³]|lpt[\d¹²³]) *(?:\..*)?$/i;
 }
