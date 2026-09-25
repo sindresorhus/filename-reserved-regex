@@ -5,11 +5,7 @@
 	"license": "MIT",
 	"repository": "sindresorhus/filename-reserved-regex",
 	"funding": "https://github.com/sponsors/sindresorhus",
-	"author": {
-		"name": "Sindre Sorhus",
-		"email": "sindresorhus@gmail.com",
-		"url": "https://sindresorhus.com"
-	},
+	"author": "Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)",
 	"type": "module",
 	"exports": {
 		"types": "./index.d.ts",
@@ -20,10 +16,11 @@
 		"node": ">=20"
 	},
 	"scripts": {
-		"test": "xo && ava"
+		"test": "xo && node --test"
 	},
 	"files": [
-		"index.js"
+		"index.js",
+		"index.d.ts"
 	],
 	"keywords": [
 		"regex",
@@ -33,7 +30,6 @@
 		"illegal"
 	],
 	"devDependencies": {
-		"ava": "^6.4.1",
-		"xo": "^1.2.2"
+		"xo": "^5.0.1"
 	}
 }
